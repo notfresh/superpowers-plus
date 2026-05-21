@@ -72,6 +72,18 @@ You: [Fix progress indicators]
 [Continue to Task 3]
 ```
 
+## After All Reviews
+
+After completing review and before returning to normal work:
+
+If work was significant (fixed issues / completed feature):
+  Ask: "需不需要回顾一下，把这次的发现/学到/完成的内容沉淀下来？"
+
+  If user agrees:
+    Announce: "I'm using the done-sync skill"
+    Use superpowers:done-sync
+    Follow done-sync process
+
 ## Integration with Workflows
 
 **Subagent-Driven Development:**
