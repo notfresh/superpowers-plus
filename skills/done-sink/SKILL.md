@@ -126,7 +126,9 @@ If user gives ANY positive feedback after task completion ("好", "不错", "可
 
 ## Manual Trigger
 
-User can also trigger manually with `/reflect` or `/done-sink`.
+Natural language trigger is always available — just say "帮我做个反思" or "回顾一下" and I'll invoke the done-sink process.
+
+Slash commands (`/reflect`, `/done-sink`) require Claude Code user-level configuration and are not provided by this project.
 
 ## File Format
 
