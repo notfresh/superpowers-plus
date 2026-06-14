@@ -22,6 +22,7 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
+   1a. **Read exploration context** — read `docs/superpowers/explorations/INDEX.md` (and `DOCUMENTS.md` if helpful). Empty, missing, or no relevant entries → proceed normally. Relevant entries → Read those files; cite explicitly in subsequent steps.
 2. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
 3. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 4. **Propose 2-3 approaches** — with trade-offs and your recommendation
@@ -36,6 +37,7 @@ You MUST create a task for each of these items and complete them in order:
 ```dot
 digraph brainstorming {
     "Explore project context" [shape=box];
+    "Read exploration context" [shape=box];
     "Visual questions ahead?" [shape=diamond];
     "Offer Visual Companion\n(own message, no other content)" [shape=box];
     "Ask clarifying questions" [shape=box];
@@ -47,7 +49,8 @@ digraph brainstorming {
     "User reviews spec?" [shape=diamond];
     "Invoke writing-plans skill" [shape=doublecircle];
 
-    "Explore project context" -> "Visual questions ahead?";
+    "Explore project context" -> "Read exploration context";
+    "Read exploration context" -> "Visual questions ahead?";
     "Visual questions ahead?" -> "Offer Visual Companion\n(own message, no other content)" [label="yes"];
     "Visual questions ahead?" -> "Ask clarifying questions" [label="no"];
     "Offer Visual Companion\n(own message, no other content)" -> "Ask clarifying questions";
@@ -76,6 +79,20 @@ digraph brainstorming {
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
 - Focus on understanding: purpose, constraints, success criteria
+
+## Reading Exploration Context
+
+Before asking clarifying questions, read the project's exploration sediment:
+
+- Read `docs/superpowers/explorations/INDEX.md`. If it has entries that look relevant to the current brainstorm topic, Read those exploration files.
+- Optionally read `DOCUMENTS.md` to know which existing project docs are off-limits or high-signal.
+- **Empty, missing, or no relevant entries: proceed normally.** Do not prompt the user to run `/explore` from here.
+- **If a relevant exploration exists: cite it explicitly** in later steps, e.g. "I see INDEX.md has an auth-flow exploration — does this need to integrate with that?" or "Your existing data-model exploration covers user tables — should this new feature extend it or stand alone?"
+- **🟠 documents in DOCUMENTS.md: never read.** Follow the explore skill's "Read a 🟠 document without first asking the user" red flag.
+- **🟢/🟡 documents whose description is clearly off-topic: don't read.** Follow the explore skill's same rule.
+- **Never invent citations.** Only cite what was actually in the read files.
+- **The read is one-shot per session.** When the topic shifts within a brainstorm, re-read only if the new topic doesn't overlap with the previous one's relevant explorations; otherwise reuse what was read. Agent's call.
+- **If the user contradicts a cited exploration** (e.g., "X 探索说走 JWT,其实我们走 cookie"), the user's latest statement wins. If a design is committed, optionally add a `## 代码 vs 文档` section to record the conflict (mirrors the explore skill's pattern).
 
 **Exploring approaches:**
 
