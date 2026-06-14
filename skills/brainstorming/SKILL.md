@@ -78,6 +78,20 @@ digraph brainstorming {
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
 - Focus on understanding: purpose, constraints, success criteria
 
+## Reading Exploration Context
+
+Before asking clarifying questions, read the project's exploration sediment:
+
+- Read `docs/superpowers/explorations/INDEX.md`. If it has entries that look relevant to the current brainstorm topic, Read those exploration files.
+- Optionally read `DOCUMENTS.md` to know which existing project docs are off-limits or high-signal.
+- **Empty, missing, or no relevant entries: proceed normally.** Do not prompt the user to run `/explore` from here.
+- **If a relevant exploration exists: cite it explicitly** in later steps, e.g. "I see INDEX.md has an auth-flow exploration — does this need to integrate with that?" or "Your existing data-model exploration covers user tables — should this new feature extend it or stand alone?"
+- **🟠 documents in DOCUMENTS.md: never read.** Follow the explore skill's "Read a 🟠 document without first asking the user" red flag.
+- **🟢/🟡 documents whose description is clearly off-topic: don't read.** Follow the explore skill's same rule.
+- **Never invent citations.** Only cite what was actually in the read files.
+- **The read is one-shot per session.** When the topic shifts within a brainstorm, re-read only if the new topic doesn't overlap with the previous one's relevant explorations; otherwise reuse what was read. Agent's call.
+- **If the user contradicts a cited exploration** (e.g., "X 探索说走 JWT,其实我们走 cookie"), the user's latest statement wins. If a design is committed, optionally add a `## 代码 vs 文档` section to record the conflict (mirrors the explore skill's pattern).
+
 **Exploring approaches:**
 
 - Propose 2-3 different approaches with trade-offs
