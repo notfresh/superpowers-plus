@@ -22,6 +22,7 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
+   1a. **Read exploration context** — read `docs/superpowers/explorations/INDEX.md` (and `DOCUMENTS.md` if helpful). Empty, missing, or no relevant entries → proceed normally. Relevant entries → Read those files; cite explicitly in subsequent steps.
 2. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
 3. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
 4. **Propose 2-3 approaches** — with trade-offs and your recommendation
