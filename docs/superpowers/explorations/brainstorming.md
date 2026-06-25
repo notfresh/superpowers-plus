@@ -41,6 +41,23 @@
 - **mockup 文件名不要复用**:`visual-companion.md:99` 写"each screen gets a fresh file",服务器按修改时间排序,改名才会被推到浏览器
 - **回到终端时推 `waiting.html` 清屏**:`visual-companion.md:117-122` 避免用户盯着已选完的画面等下一步
 
+## 触发机制(多语言支持)
+
+brainstorming 的触发**不依赖关键词匹配**，而是通过 `using-superpowers` 建立的语义检查机制：
+
+1. **SessionStart Hook** 将 `using-superpowers` 技能注入上下文
+2. `using-superpowers` 强制要求：**任何回复前必须检查是否有技能适用**
+3. AI 根据技能的 **description** 自主判断是否匹配：
+   - `brainstorming` description: *"You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior"*
+4. AI 理解用户意图(语义)而非字面模式 → 因此**任何语言**都能触发
+
+**为什么能多语言触发**：用户用中文说"让我们做一个 React 待办列表"，AI 理解到用户想创建新功能 → 触发 brainstorming。用英文/法文/日文同理。
+
+**相关文件**：
+- `hooks/session-start` — SessionStart hook 脚本,加载 using-superpowers
+- `hooks/hooks.json` — hook 配置
+- `skills/using-superpowers/SKILL.md:44-75` — 技能检查流程图
+
 ## 关联
 - 紧随其后(唯一):`writing-plans` —— 生成实现计划
 - 优先触发原因:见 `skills/using-superpowers/SKILL.md` 的优先级说明
