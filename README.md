@@ -27,9 +27,9 @@ There's a bunch more to it, but that's the core of the system. And because the s
 
 ## Commercial Services
 
-> **📌 This is a fork of [obra/superpowers](https://github.com/obra/superpowers) v5.1.0.** Two extra skills are added: [`explore`](skills/explore/SKILL.md) and [`done-sink`](skills/done-sink/SKILL.md). See [WHAT-IS-NEW.md](WHAT-IS-NEW.md) for what changed.
+> **📌 This is a fork of [obra/superpowers](https://github.com/obra/superpowers) v6.1.1.** Two extra skills are added: [`explore`](skills/explore/SKILL.md) and [`done-sink`](skills/done-sink/SKILL.md). See [WHAT-IS-NEW.md](WHAT-IS-NEW.md) for what changed.
 >
-> **📌 本仓库是 [obra/superpowers](https://github.com/obra/superpowers) v5.1.0 的 fork。** 在上游基础上新增了两个 skill: [`explore`](skills/explore/SKILL.md) 和 [`done-sink`](skills/done-sink/SKILL.md)。差异详见 [WHAT-IS-NEW.md](WHAT-IS-NEW.md)。
+> **📌 本仓库是 [obra/superpowers](https://github.com/obra/superpowers) v6.1.1 的 fork。** 在上游基础上新增了两个 skill: [`explore`](skills/explore/SKILL.md) 和 [`done-sink`](skills/done-sink/SKILL.md)。差异详见 [WHAT-IS-NEW.md](WHAT-IS-NEW.md)。
 
 ## Sponsorship
 
