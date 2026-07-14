@@ -25,7 +25,7 @@ Next up, once you say "go", it launches a *subagent-driven-development* process,
 
 There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers.
 
-## Commercial Services
+## What's new
 
 > **📌 This is a fork of [obra/superpowers](https://github.com/obra/superpowers) v6.1.1.** Two extra skills are added: [`explore`](skills/explore/SKILL.md) and [`done-sink`](skills/done-sink/SKILL.md). See [WHAT-IS-NEW.md](WHAT-IS-NEW.md) for what changed.
 >
